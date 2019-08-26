@@ -85,7 +85,12 @@
 
 <script>
 export default {
-    name :'City'
+    name :'City',
+    mounted(){
+        this.axios.get('/api/cityList').then((res) => {
+            console.log(res);
+        });
+    }
 }
 </script>
 
